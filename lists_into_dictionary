@@ -1,0 +1,10 @@
+# Define the two lists to combine 
+keys = ['a', 'b', 'c'] 
+values = [1, 2, 3] 
+# Combine the lists into a dictionary using a dictionary comprehension 
+combined_dict = {keys[i]: values[i] for i in range(len(keys))} 
+# Print the resulting dictionary 
+print(combined_dict)
+
+#Output: 
+#{'a': 1, 'b': 2, 'c': 3} 

@@ -1,0 +1,30 @@
+# Prompt the user to enter a list of names and birthdays 
+print("Enter a list of names and birthdays, separated by commas:") 
+name_birthday_str = input() 
+# Split the string into a list of name-birthday pairs 
+name_birthday_pairs = name_birthday_str.split(',') 
+# Create an empty dictionary to store the name-birthday pairs 
+name_birthday_dict = {} 
+# Loop over each name-birthday pair and add it to the dictionary 
+for pair in name_birthday_pairs: 
+ # Split the pair into a name and a birthday 
+ name, birthday = pair.strip().split(':') 
+ # Add the name and birthday to the dictionary 
+ name_birthday_dict[name] = birthday 
+# Prompt the user to enter a name to look up 
+print("Enter a name to look up:") 
+name = input() 
+# Look up the name in the dictionary and print the corresponding birthday 
+if name in name_birthday_dict: 
+ birthday = name_birthday_dict[name] 
+ print(f"{name}'s birthday is {birthday}") 
+else: 
+ print(f"Sorry, {name} is not in the dictionary")
+ 
+ 
+#OUTPUT
+#Enter a list of names and birthdays, separated by commas: 
+#ram:4-5-2001 
+#Enter a name to look up: 
+#ram 
+#ram's birthday is 4-5-2001

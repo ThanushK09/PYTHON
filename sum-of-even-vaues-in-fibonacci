@@ -1,0 +1,18 @@
+# Initialize the first two terms of the sequence 
+a, b = 1, 2 
+# Initialize the sum variable 
+sum = 0 
+# Loop while the value of b is less than or equal to four million 
+while b <= 4000000: 
+ # Check if the current term is even 
+    if b % 2 == 0: 
+ # If so, add it to the sum variable 
+        sum += b 
+ # Generate the next term in the sequence 
+    a, b = b, a + b 
+# Print the sum of the even-valued terms 
+print(sum) 
+
+#Output: 
+#613732
+

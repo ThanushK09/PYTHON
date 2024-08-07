@@ -1,0 +1,21 @@
+import string 
+# Define the filename to read 
+filename = "example_file.txt" 
+ 
+# Initialize the Word frequency counts  
+text_freqs = {} 
+# Read the file and count the word frequencies 
+with open(filename, "r") as f: 
+  for line in f:     
+    for w in line.split(): 
+           if w in text_freqs:  
+            text_freqs[w] += 1 
+           else:  
+            text_freqs[w] = 1   
+# Print the character frequencies  
+print("word frequencies in Input text file:") 
+print(text_freqs) 
+
+#Output: 
+#word frequencies in Input text file: 
+#{'import': 2, 'string': 1, '#': 1, 'Define': 1, 'the': 1, 'filename': 2, 'to': 1, 'read': 1, '=': 1, '"example_file.txt"': 1}

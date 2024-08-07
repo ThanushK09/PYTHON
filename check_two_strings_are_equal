@@ -1,0 +1,20 @@
+def nearly_equal(a, b): 
+ # If the strings are identical, they are nearly equal 
+ if a == b: 
+    return True 
+ # If the strings have different lengths, they are not nearly equal 
+ if len(a) != len(b): 
+    return False 
+ # Count the number of differences between the strings 
+ num_diffs = 0 
+ for i in range(len(a)): 
+    if a[i] != b[i]: 
+        num_diffs += 1 
+    if num_diffs > 1: 
+       return False 
+ # If there is exactly one difference between the strings, they are nearly equal 
+ return num_diffs == 1 
+print(nearly_equal('helllo','name'))
+
+#OUtput: 
+ #False 
